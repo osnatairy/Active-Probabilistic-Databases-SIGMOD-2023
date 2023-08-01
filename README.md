@@ -6,7 +6,7 @@ We present a modular end-to-end framework to manage uncertain data management in
 ## Data
 
 During the experiments, we used two benchmarks. The first is the [NELL](https://dl.acm.org/doi/10.1145/3191513) dataset, and the second dataset is [TPC-H](http://www.tpc.org/tpch/).
-Our framework's data is already processed into the Boolean expressions we try to evaluate and are available [here](https://drive.google.com/drive/folders/1deY_M52Vj45qr0Zudzhc0FsOTwxZjqOs?usp=sharing). We provide the NELL dataset, Please download the archive and place the directories/files in the project's root directory.
+Our framework's data is already processed into the Boolean expressions we try to evaluate. We provide the NELL dataset which is available [here](https://drive.google.com/drive/folders/1deY_M52Vj45qr0Zudzhc0FsOTwxZjqOs?usp=sharing). Please download the archive and place the directories/files in the project's root directory.
 
 In addition, we use a trained model of [LAL](https://proceedings.neurips.cc/paper/2017/file/8ca8da41fe1ebc8d3ca31dc14f5fc56c-Paper.pdf)(Learning Active Learning). Please download the [trained model](https://github.com/ksenia-konyushkova/LAL/blob/master/lal%20datasets/LAL-iterativetree-simulatedunbalanced-big.npz) (LAL-iterativetree-simulatedunbalanced-big.npz) from its repository under 'lal datasets' directory, and place it in the project's root directory.
 
