@@ -11,7 +11,7 @@ from LearnerModule import LearnerModule, LC, LAL, Learn_Once, No_Learning, LAL_M
 from ProbeSelectorModule import SimpleMultiplicationWithIntentionalFading, UtilityOnly, UncertaintyOnly
 from Scenario import Scenarios, NELL
 
-
+#save all the results to the specified file.
 def save_results_ALL(path,n_initial, Online,Offline,LAL_plus_ctu,LC_plus_Ctu,LAL_Only,LC_only,Random, iterations):
     new_data = {  "Online": Online, "Offline": Offline,"LAL_PLUS_CTU":LAL_plus_ctu,"LC_Plus_Ctu":LC_plus_Ctu,"LAL_Only":LAL_Only,"LC_Only":LC_only
                   ,"RANDOM":Random
@@ -83,7 +83,7 @@ def randomize_known_probes(scen, init_number):
     return initial_indices
 
 
-
+# run the online variant of RO.
 def Online_variant_RO(repo, scen):
     original_scen = copy.deepcopy(scen)
     original_repo = copy.deepcopy(repo)
@@ -93,8 +93,6 @@ def Online_variant_RO(repo, scen):
     learnerModule = LearnerModule(classifier=RandomForestClassifier(n_estimators=100),uncertainty_estimator=LC())
     architecture_1=ActiveConsentEvaluation(learnerModule,BooleanEvaluationModule_Online,ProbeSelectorModule)
 
-
-
     idx,truth_value=architecture_1.Evaluate_consent(repo,scen)
     print(idx)
     print(truth_value)
@@ -102,7 +100,7 @@ def Online_variant_RO(repo, scen):
     repo = copy.deepcopy(original_repo)
     return idx
 
-
+# run LC variant.
 def LC_Only(repo, scen):
     original_scen = copy.deepcopy(scen)
     original_repo = copy.deepcopy(repo)
@@ -116,6 +114,8 @@ def LC_Only(repo, scen):
     scen = copy.deepcopy(original_scen)
     repo = copy.deepcopy(original_repo)
     return idx
+
+# run LAL variant.
 def LAL_Only(repo, scen,lal_cls):
     original_scen = copy.deepcopy(scen)
     original_repo = copy.deepcopy(repo)
@@ -130,8 +130,7 @@ def LAL_Only(repo, scen,lal_cls):
     repo = copy.deepcopy(original_repo)
     return idx
 
-
-
+# run online variant.
 def Online_variant(repo, scen, BE_algo):
     original_scen = copy.deepcopy(scen)
     original_repo = copy.deepcopy(repo)
@@ -140,8 +139,6 @@ def Online_variant(repo, scen, BE_algo):
     learnerModule = LearnerModule(classifier=RandomForestClassifier(n_estimators=100),uncertainty_estimator=LC())
     architecture_1=ActiveConsentEvaluation(learnerModule,BooleanEvaluationModule_Online,ProbeSelectorModule)
 
-
-
     idx,truth_value=architecture_1.Evaluate_consent(repo,scen)
     print(idx)
     print(truth_value)
@@ -149,7 +146,7 @@ def Online_variant(repo, scen, BE_algo):
     repo = copy.deepcopy(original_repo)
     return idx
 
-
+# run LC plus CtU variant.
 def variant_LC_plus_CtU(repo,scen,BE_algo):
     original_scen = copy.deepcopy(scen)
     original_repo = copy.deepcopy(repo)
@@ -165,7 +162,7 @@ def variant_LC_plus_CtU(repo,scen,BE_algo):
     return idx
 
 
-
+# run LAL plus CtU variant.
 def variant_LAL_plus_CtU(repo,scen,BE_algo,lal_cls):
     original_scen = copy.deepcopy(scen)
     original_repo = copy.deepcopy(repo)
@@ -180,8 +177,7 @@ def variant_LAL_plus_CtU(repo,scen,BE_algo,lal_cls):
     repo = copy.deepcopy(original_repo)
     return idx
 
-
-
+# run offline variant.
 def Offline_Variant(repo, scen,BE_algo):
     original_scen = copy.deepcopy(scen)
     original_repo = copy.deepcopy(repo)
@@ -194,8 +190,8 @@ def Offline_Variant(repo, scen,BE_algo):
     repo = copy.deepcopy(original_repo)
     return idx
 
+# run random algorithm.
 def Random_Variant(repo,scen):
-
     original_scen = copy.deepcopy(scen)
     original_repo = copy.deepcopy(repo)
     Random_algorithm = Random_selection()
@@ -209,6 +205,7 @@ def Random_Variant(repo,scen):
     repo=copy.deepcopy(original_repo)
     return idx
 
+# run greedy algotithm.
 def Greedy_Variant(repo, scen):
     original_scen = copy.deepcopy(scen)
     original_repo = copy.deepcopy(repo)
@@ -221,6 +218,8 @@ def Greedy_Variant(repo, scen):
     scen = copy.deepcopy(original_scen)
     repo = copy.deepcopy(original_repo)
     return idx
+
+# run equal probability variant.
 def EP_Variant(repo, scen,BE_algo):
     original_scen = copy.deepcopy(scen)
     original_repo = copy.deepcopy(repo)
@@ -244,7 +243,7 @@ if __name__ == '__main__':
     General_Algorithm = General()
     lal_cls=LAL_MODEL()
 
-
+    # get the parameters
     algorithm = sys.argv[1]
     query = sys.argv[2]
     n_initial = int(sys.argv[3])
@@ -286,7 +285,7 @@ if __name__ == '__main__':
         ls_LC_Only.append(int(res_LC_only))
 
 
-        #run the choosen algorithm
+        # run the chosen algorithm
         res_Online=Online_variant(copy.deepcopy(repo),copy.deepcopy(scen),BE_algo)
         ls_res_online.append(int(res_Online))
 
