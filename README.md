@@ -15,9 +15,9 @@ In addition, we use a trained model of [LAL](https://proceedings.neurips.cc/pape
 This project is running on Windows. 
 Clone this repository to the home directory
 ```shell
-git clone https://github.com/osnatairy/*.git
+[git clone https://github.com/osnatairy/Active-Probabilistic-Databases-SIGMOD-2023.git
 ```
-The packages we use in our framework are [NumPy](https://numpy.org/install/), [Pandas](https://pandas.pydata.org/docs/getting_started/install.html), [scikit-learn](https://scikit-learn.org/stable/install.html), and [boolean](https://pypi.org/project/boolean/). Please make sure they are installed.
+Next, install the following packages that are used in our framework: [NumPy](https://numpy.org/install/), [Pandas](https://pandas.pydata.org/docs/getting_started/install.html), [scikit-learn](https://scikit-learn.org/stable/install.html), and [boolean](https://pypi.org/project/boolean/).
 
 ## Getting Started
 The framework gets three parameters: algorithm, query, and size of repo. The values of the different parameters can be chosen from the following values:
