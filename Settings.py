@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 
 from BooleanEvaluationModule import algebra
 
-
+# This class deals with the datasets and its properties. 
 class Setting:
     def get_Boolean_Provenance(self):
         pass
