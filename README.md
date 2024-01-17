@@ -17,16 +17,19 @@ Clone this repository to the home directory
 ```shell
 [git clone https://github.com/osnatairy/Active-Probabilistic-Databases-SIGMOD-2023.git
 ```
-Next, install the following packages that are used in our framework: [NumPy](https://numpy.org/install/), [Pandas](https://pandas.pydata.org/docs/getting_started/install.html), [scikit-learn](https://scikit-learn.org/stable/install.html), and [boolean](https://pypi.org/project/boolean/).
+Next, please install the following packages that are used in our framework: [NumPy](https://numpy.org/install/), [Pandas](https://pandas.pydata.org/docs/getting_started/install.html), [scikit-learn](https://scikit-learn.org/stable/install.html), and [boolean](https://pypi.org/project/boolean/).
 
 ## Getting Started
-The framework gets three parameters: algorithm, query, and size of repo. The values of the different parameters can be chosen from the following values:
+The framework gets three parameters: algorithm, query, and repository size. The values of the different parameters can be chosen from the following values:
 
 **algorithm:** RO_Algorithm, General_Algorithm, Q_Value_Algorithm
+This parameter defines the algorithm for choosing the next probe at each round.
 
 **query:** 'Q1','Q2','Q3','Q4','Q5','Q6','Q7','Q8'
+This parameter defines the query we want to run. An explanation of each query appears [here](https://github.com/osnatairy/Active-Probabilistic-Databases-SIGMOD-2023/blob/main/NELL%20Queries.pdf) 
 
 **size_of_repos:** 80, 320, 1280, 5120
+This parameter defines the initial known probes in the repository.
 
 Next, you run: **python main.py algorithm query size_of_repo**, for example:
 
@@ -36,7 +39,8 @@ python main.py RO_Algorithm Q1 80
 
 ## Results
 The experiments results are held on a file with the name of "\Results_NELL_experiment_initials_{}_file.csv" under NELL folder and a path based on the parameter you choose, for example: NELL/Q1_Result/80_initials
+That file contains the running results which are the number of probes it took to evaluate the chosen query.
 
 
 ## Additional Info. File:
-On the root path of the project, there is a file name: ‘NELL Queries.pdf’, which explains the queries we used from the dataset.
+On the project's root path, there is a file name: ‘NELL Queries.pdf’, which explains the queries we used from the dataset.
