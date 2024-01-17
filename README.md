@@ -12,6 +12,11 @@ In addition, we use a trained model of [LAL](https://proceedings.neurips.cc/pape
 
 ## Installation
 
+This project is running on Windows. 
+Clone this repository to the home directory
+```shell
+git clone https://github.com/osnatairy/*.git
+```
 The packages we use in our framework are [NumPy](https://numpy.org/install/), [Pandas](https://pandas.pydata.org/docs/getting_started/install.html), [scikit-learn](https://scikit-learn.org/stable/install.html), and [boolean](https://pypi.org/project/boolean/). Please make sure they are installed.
 
 ## Getting Started
