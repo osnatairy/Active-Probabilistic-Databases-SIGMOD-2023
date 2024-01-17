@@ -22,13 +22,16 @@ Next, please install the following packages that are used in our framework: [Num
 ## Getting Started
 The framework gets three parameters: algorithm, query, and repository size. The values of the different parameters can be chosen from the following values:
 
-**algorithm:** RO_Algorithm, General_Algorithm, Q_Value_Algorithm
+**algorithm:** RO_Algorithm, General_Algorithm, Q_Value_Algorithm 
+
 This parameter defines the algorithm for choosing the next probe at each round.
 
-**query:** 'Q1','Q2','Q3','Q4','Q5','Q6','Q7','Q8'
+**query:** 'Q1','Q2','Q3','Q4','Q5','Q6','Q7','Q8' 
+
 This parameter defines the query we want to run. An explanation of each query appears [here](https://github.com/osnatairy/Active-Probabilistic-Databases-SIGMOD-2023/blob/main/NELL%20Queries.pdf) 
 
-**size_of_repos:** 80, 320, 1280, 5120
+**size_of_repos:** 80, 320, 1280, 5120 
+
 This parameter defines the initial known probes in the repository.
 
 Next, you run: **python main.py algorithm query size_of_repo**, for example:
