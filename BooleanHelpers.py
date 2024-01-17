@@ -2,7 +2,7 @@ import itertools
 
 from boolean import boolean
 
-# This class contains functions that helps us use the boolean expression.
+# This class contains functions that help us use the boolean expression.
 class BooleanHelper:
     def convert_list_to_and_term(self, mylist):
         algebra = boolean.BooleanAlgebra()
