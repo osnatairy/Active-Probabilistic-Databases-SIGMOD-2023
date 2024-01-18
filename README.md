@@ -12,10 +12,10 @@ In addition, we use a trained model of [LAL](https://proceedings.neurips.cc/pape
 
 ## Installation
 
-This project is running on Windows. 
+This project is running on Windows, Python 3.7
 Clone this repository to the home directory
 ```shell
-[git clone https://github.com/osnatairy/Active-Probabilistic-Databases-SIGMOD-2023.git
+git clone https://github.com/osnatairy/Active-Probabilistic-Databases-SIGMOD-2023.git
 ```
 Next, please install the following packages that are used in our framework: [NumPy](https://numpy.org/install/), [Pandas](https://pandas.pydata.org/docs/getting_started/install.html), [scikit-learn](https://scikit-learn.org/stable/install.html), and [boolean](https://pypi.org/project/boolean/).
 
