@@ -5,7 +5,7 @@ import numpy as np
 
 from BooleanEvaluationModule import symbol
 
-
+# The classes below refer to the probe selector options.
 class ProbeSelectorModule:
     def chooseNextProbe(self):
         pass
