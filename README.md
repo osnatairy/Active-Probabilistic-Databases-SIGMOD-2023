@@ -18,7 +18,24 @@ Clone this repository to the home directory
 ```shell
 git clone https://github.com/osnatairy/Active-Probabilistic-Databases-SIGMOD-2023.git
 ```
-Next, please install the following packages that are used in our framework: [NumPy](https://numpy.org/install/), [Pandas](https://pandas.pydata.org/docs/getting_started/install.html), [scikit-learn](https://scikit-learn.org/stable/install.html), and [boolean](https://pypi.org/project/boolean/).
+Next, please install the following packages that are used in our framework:
+
+[NumPy](https://numpy.org/install/)
+```shell
+pip install numpy
+```
+[Pandas](https://pandas.pydata.org/docs/getting_started/install.html)
+```shell
+pip install pandas
+```
+[scikit-learn](https://scikit-learn.org/stable/install.html)
+```shell
+pip install -U scikit-learn
+```
+[boolean](https://pypi.org/project/boolean/)
+```shell
+pip install boolean
+```
 
 ## Getting Started
 The framework gets three parameters: algorithm, query, and repository size. The values of the different parameters can be chosen from the following values:
