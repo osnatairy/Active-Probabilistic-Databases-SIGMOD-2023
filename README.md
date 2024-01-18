@@ -52,7 +52,7 @@ This parameter defines the query we want to run. An explanation of each query ap
 
 This parameter defines the initial known probes in the repository.
 
-Next, you run: **python main.py <algorithm> <query> <size_of_repo>**, for example:
+Next, you run: **python main.py algorithm query size_of_repo**, for example:
 
 ```bash
 python main.py RO_Algorithm Q1 80
