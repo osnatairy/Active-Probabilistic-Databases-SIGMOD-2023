@@ -12,6 +12,7 @@ import numpy as np
 from Settings import *
 from BooleanHelpers import BooleanHelper
 
+#This class deals with the functions and variables that handle the evaluation process.
 class Scenarios:
     def __init__(self, framework:Setting):
         self.framework = framework
