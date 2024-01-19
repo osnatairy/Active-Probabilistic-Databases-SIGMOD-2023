@@ -20,19 +20,19 @@ git clone https://github.com/osnatairy/Active-Probabilistic-Databases-SIGMOD-202
 ```
 Next, please install the following packages that are used in our framework:
 
-[NumPy](https://numpy.org/install/)
+[NumPy](https://numpy.org/install/) Version: 1.23.3
 ```shell
 pip install numpy
 ```
-[Pandas](https://pandas.pydata.org/docs/getting_started/install.html)
+[Pandas](https://pandas.pydata.org/docs/getting_started/install.html) Version: 1.4.4
 ```shell
 pip install pandas
 ```
-[scikit-learn](https://scikit-learn.org/stable/install.html)
+[scikit-learn](https://scikit-learn.org/stable/install.html) Version: 1.4.0
 ```shell
 pip install -U scikit-learn
 ```
-[boolean](https://pypi.org/project/boolean/)
+[boolean](https://pypi.org/project/boolean/) Version: 1.1.0
 ```shell
 pip install boolean
 ```
